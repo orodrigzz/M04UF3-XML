@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.55.2/phaser.min.js">     </script>
+<title> Cruzando la calle Simulator </title> </head>
+
+<body>
+<img src="character.png"/>
+
+<h1> Te falta calle </h1>
+<script>
+let game_w = 800;
+let game_h = 600;
+
+let config = {
+	width: 800, 
+	height: 600,
+	 physics: {
+        default: 'arcade',
+        arcade: {
+            debug: true
+        }
+    },
+	scene: {
+		preload: preload,
+		create: crear,
+		update: actualizar
+	}
+};
+
+let player;
+
+let game = new Phaser.Game(config);
+
+function preload ()
+{
+	this.load.image('logo','character.png');	}
+
+function crear (){
+	player = this.add.image(400,300, 'logo');
+}
+
+function actualizar (){	
+
+}
+</script>
+</body>
+</html>

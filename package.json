@@ -1,0 +1,19 @@
+{
+  "name": "m04uf3-xml",
+  "version": "1.0.0",
+  "description": "JavaScript con Phaser (Que no Pfizer)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orodrigzz/M04UF3-XML.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/orodrigzz/M04UF3-XML/issues"
+  },
+  "homepage": "https://github.com/orodrigzz/M04UF3-XML#readme"
+}
