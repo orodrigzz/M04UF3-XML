@@ -7,6 +7,8 @@ let http_server = http.createServer(function(req, res){
 
 	if (req.url == "/character.png"){
 	 fs.readFile("character.png", function(err,data){
+	if (req.url == "/formula.png"){
+	 fs.readFile("formula.png", function(err,data){
 	if (err){
 		console.log("Error");
 		return

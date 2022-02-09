@@ -6,6 +6,12 @@
 
 <body>
 <img src="character.png"/>
+<img src="carretera.png"/>
+<img src="truck.png"/>
+<img src="formula.png"/>
+<img src="hotdog.png"/>
+<img src="sports_race.png"/>
+
 
 <h1> Te falta calle </h1>
 <script>
@@ -34,10 +40,20 @@ let game = new Phaser.Game(config);
 
 function preload ()
 {
-	this.load.image('logo','character.png');	}
-
+	this.load.image('logo','character.png');
+	this.load.image('highway','carretera.png');
+	this.load.image('f1','formula.png');
+	this.load.image('truck','truck.png');
+	this.load.image('deportivo','sports_race.png');
+	this.load.image('hotdog','hotdog.png');	
+}
 function crear (){
 	player = this.add.image(400,300, 'logo');
+	carretera = this.add.image(800,600, 'highway');
+	f1 = this.add.image(400,300, 'f1');
+	camion = this.add.image(400,300, 'truck');
+	deportivo = this.add.image(400,300, 'deportivo');
+	hotdog = this.add.image(400,300, 'hotdog');
 }
 
 function actualizar (){	
