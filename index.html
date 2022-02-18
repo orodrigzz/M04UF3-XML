@@ -54,6 +54,8 @@ let road2_y = 224;
 let road3_y = 380;
 let road4_y = 460;
 
+let road_offset_y = 96;
+
 let offset_x = -128;
 
 let lives = 3;
@@ -65,6 +67,7 @@ let score_txt;
 let crossing = false;
 
 function reset (){
+crossing = false;
 
 player_img.x = player_x;
 player_img.y = player_y;
@@ -135,7 +138,6 @@ function crear (){
 		});
 	}
 
-
 	this.add.text(game_w/2, 64, "VIDAS: ");
 	lives_txt = this.add.text(game_w/2+60, 64, "0");
 	this.add.text(game_w/2+128, 64, "PUNTOS: ");
@@ -167,6 +169,13 @@ function actualizar (){
 	checkCar(car3_img);
 	checkCar(car4_img);	
 
+	if (player_img.y > game_h - road_offset_y)
+		crossing = true;
+	else if (player_img.y <= road_offset_y && crossing){
+		crossing = false;
+		score++;
+		score_text. text = score.toString();
+	}
 }
 
 function checkCar (car){
